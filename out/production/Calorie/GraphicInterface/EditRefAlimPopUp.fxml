@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.EditRefAlimPopUp">
+   <children>
+      <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="144.0" prefHeight="56.0" prefWidth="421.0" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="186.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#yes" prefHeight="25.0" prefWidth="62.0" text="Sim" />
+      <Button layoutX="300.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#no" prefHeight="25.0" prefWidth="62.0" text="Não" />
+   </children>
+</AnchorPane>

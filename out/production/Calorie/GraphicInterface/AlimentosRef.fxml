@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.AlimentosRef">
+   <children>
+      <TableView fx:id="lista" prefHeight="400.0" prefWidth="461.0">
+        <columns>
+          <TableColumn fx:id="nome" prefWidth="75.0" text="Nome" />
+          <TableColumn fx:id="qty" prefWidth="75.0" text="Quantidade" />
+            <TableColumn fx:id="cal" prefWidth="75.0" text="Calorias" />
+            <TableColumn fx:id="lip" prefWidth="75.0" text="Lipidos" />
+            <TableColumn fx:id="carb" prefWidth="92.0" text="Carbohidratos" />
+            <TableColumn fx:id="prot" prefWidth="67.0" text="Proteinas" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
