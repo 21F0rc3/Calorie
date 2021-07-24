@@ -1,119 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.PieChart?>
-<?import javafx.scene.control.Button?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="1080.0" maxWidth="1920.0" minHeight="480.0" minWidth="800.0" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Index">
-    <Tab closable="false" text="Inicio">
-        <Pane maxHeight="1080.0" maxWidth="1920.0" minHeight="480.0" minWidth="800.0" prefHeight="720.0" prefWidth="1280.0">
-         <Label layoutX="139.0" layoutY="73.0" prefHeight="75.0" prefWidth="119.0" text="Calorias">
-            <font>
-               <Font size="32.0" />
-            </font></Label>
-         <Label layoutX="139.0" layoutY="198.0" text="Lipidos">
-            <font>
-               <Font size="32.0" />
-            </font></Label>
-         <Label layoutX="139.0" layoutY="309.0" text="Carbohidratos">
-            <font>
-               <Font size="32.0" />
-            </font></Label>
-         <Label layoutX="133.0" layoutY="424.0" text="Proteinas">
-            <font>
-               <Font size="32.0" />
-            </font></Label>
-         <ProgressBar fx:id="calBar" layoutX="479.0" layoutY="111.0" prefWidth="200.0" progress="0.0" />
-         <ProgressBar fx:id="lipBar" layoutX="479.0" layoutY="222.0" prefWidth="200.0" progress="0.0" />
-         <ProgressBar fx:id="carbBar" layoutX="479.0" layoutY="324.0" prefWidth="200.0" progress="0.0" />
-         <ProgressBar fx:id="protBar" layoutX="479.0" layoutY="439.0" prefWidth="200.0" progress="0.0" />
-         <Label fx:id="cal" layoutX="169.0" layoutY="131.0" text="0">
-            <font>
-               <Font size="24.0" />
-            </font>
-         </Label>
-         <Label fx:id="lip" layoutX="163.0" layoutY="240.0" text="0">
-            <font>
-               <Font size="24.0" />
-            </font>
-         </Label>
-         <Label fx:id="carb" layoutX="157.0" layoutY="346.0" text="0">
-            <font>
-               <Font size="24.0" />
-            </font>
-         </Label>
-         <Label fx:id="prot" layoutX="157.0" layoutY="457.0" text="0">
-            <font>
-               <Font size="24.0" />
-            </font>
-         </Label>
-        </Pane>
-    </Tab>
-    <Tab closable="false" text="Refeições">
-        <Pane maxHeight="1080.0" maxWidth="1920.0" minHeight="480.0" minWidth="800.0" prefHeight="720.0" prefWidth="1280.0">
-         <ScrollPane hbarPolicy="NEVER" prefHeight="691.0" prefWidth="1280.0">
-           <content>
-             <AnchorPane prefHeight="687.0" prefWidth="1280.0">
-                  <children>
-                     <Pane>
-                        <children>
-                           <GridPane fx:id="refeicoes" prefWidth="1280.0">
-                             <columnConstraints>
-                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                             </columnConstraints>
-                             <rowConstraints>
-                               <RowConstraints vgrow="SOMETIMES" />
-                             </rowConstraints>
-                           </GridPane>
-                        </children>
-                     </Pane>
-                     <Button fx:id="edit" layoutX="640.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#editaRefeicao" text="Editar Refeições">
-                        <font>
-                           <Font size="17.0" />
-                        </font>
-                     </Button>
-                        <Button layoutX="478.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#adicionaRefeicao" text="Adicionar Refeição">
-                        <font>
-                           <Font size="17.0" />
-                        </font>
-                     </Button>
-                  </children>
-               </AnchorPane>
-           </content>
-         </ScrollPane>
-        </Pane>
-    </Tab>
-   <Tab closable="false" text="Perfil">
-      <content>
-         <Pane prefHeight="200.0" prefWidth="200.0">
-            <children>
-               <Label layoutX="171.0" layoutY="111.0" text="Peso:">
-                  <font>
-                     <Font size="24.0" />
-                  </font>
-               </Label>
-               <Label layoutX="170.0" layoutY="197.0" text="Altura:">
-                  <font>
-                     <Font size="24.0" />
-                  </font>
-               </Label>
-               <TextField fx:id="peso" layoutX="304.0" layoutY="116.0" onKeyTyped="#updatePeso" />
-               <TextField fx:id="altura" layoutX="304.0" layoutY="202.0" onKeyTyped="#updateAltura" />
-               <PieChart fx:id="pieChart" layoutX="640.0" layoutY="44.0" />
-            </children>
-         </Pane>
-      </content>
-   </Tab>
-</TabPane>
+<HBox minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Index">
+   <children>
+      <AnchorPane fx:id="menu" maxWidth="300.0" minHeight="600.0" minWidth="170.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css">
+         <children>
+            <Label layoutY="287.0" maxWidth="1.7976931348623157E308" onMouseClicked="#Refeicoes" prefHeight="27.0" prefWidth="170.0" text="Refeições" textFill="#b4b5bc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <stylesheets>
+                  <URL value="@../Stylesheets/buttons.css" />
+                  <URL value="@../Stylesheets/theme.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="text" />
+               </styleClass></Label>
+            <Label alignment="CENTER" layoutX="54.0" layoutY="37.0" prefHeight="27.0" prefWidth="63.0" styleClass="text" stylesheets="@../Stylesheets/theme.css" text="Calorie" textFill="#b4b5bc" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="48.0">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="248.0" maxWidth="1.7976931348623157E308" onMouseClicked="#Inicio" prefHeight="27.0" prefWidth="170.0" text="Inicio" textFill="#b4b5bc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="text" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@../Stylesheets/buttons.css" />
+                  <URL value="@../Stylesheets/theme.css" />
+               </stylesheets></Label>
+            <Label layoutY="325.0" maxWidth="1.7976931348623157E308" onMouseClicked="#Perfil" prefHeight="27.0" prefWidth="170.0" text="Perfil" textFill="#b4b5bc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <stylesheets>
+                  <URL value="@../Stylesheets/buttons.css" />
+                  <URL value="@../Stylesheets/theme.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="text" />
+               </styleClass></Label>
+            <Group fx:id="inicioBar" layoutY="248.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" width="164.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="BLACK" strokeType="INSIDE" width="7.0" />
+               </children>
+            </Group>
+            <Group fx:id="refeicoesBar" layoutY="287.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" width="164.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="BLACK" strokeType="INSIDE" width="7.0" />
+               </children>
+            </Group>
+            <Group fx:id="perfilBar" layoutY="325.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" width="164.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="BLACK" strokeType="INSIDE" width="7.0" />
+               </children>
+            </Group>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="conteudo" minHeight="600.0" minWidth="630.0" />
+   </children>
+</HBox>

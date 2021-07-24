@@ -1,18 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.EditRefAlimPopUp">
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.EditRefAlimPopUp">
    <children>
-      <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="144.0" prefHeight="56.0" prefWidth="421.0" textAlignment="CENTER">
+      <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutY="11.0" prefHeight="95.0" prefWidth="300.0" stylesheets="@../Stylesheets/theme.css" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="11.0">
          <font>
             <Font size="16.0" />
          </font>
+         <styleClass>
+            <String fx:value="background-primary" />
+            <String fx:value="text" />
+         </styleClass>
       </Label>
-      <Button layoutX="186.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#yes" prefHeight="25.0" prefWidth="62.0" text="Sim" />
-      <Button layoutX="300.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#no" prefHeight="25.0" prefWidth="62.0" text="Não" />
+      <Label layoutX="55.0" layoutY="131.0" onMouseClicked="#yes" text="Sim" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="55.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../Stylesheets/buttons.css" />
+            <URL value="@../Stylesheets/theme.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="background-primary" />
+            <String fx:value="button" />
+            <String fx:value="text" />
+         </styleClass>
+      </Label>
+      <Label layoutX="206.0" layoutY="131.0" onMouseClicked="#no" text="Não" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="55.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../Stylesheets/buttons.css" />
+            <URL value="@../Stylesheets/theme.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="text" />
+            <String fx:value="button" />
+            <String fx:value="background-primary" />
+         </styleClass>
+      </Label>
    </children>
 </AnchorPane>

@@ -28,16 +28,41 @@ public class Main extends Application {
         //Para passar todos os controladores e scenes necessarios a nova stage
         Index indexController = loader.getController();
 
-        sistema.loadData(indexController);
+        //sistema.loadData(indexController);
 
         Scene scene = new Scene(parent);
 
         stage.setScene(scene);
         stage.show();
 
+        stage.setMinWidth(800);
+        stage.setMinHeight(600);
+
+        stage.widthProperty().addListener((obs, oldVal, newVal) -> {
+            try {
+                indexController.getRefPaneController().setWidth(stage.getWidth());
+                indexController.getInicioController().setWidth(stage.getWidth());
+                indexController.getPerfilController().setWidth(stage.getWidth());
+
+                indexController.getMenu().setPrefWidth(stage.getWidth()*0.1);
+            }catch (NullPointerException nullPointerException) {
+                
+            }
+        });
+
+        stage.heightProperty().addListener((obs, oldVal, newVal) -> {
+            try {
+                indexController.getRefPaneController().setHeight(stage.getHeight());
+                indexController.getInicioController().setHeight(stage.getHeight());
+                indexController.getPerfilController().setHeight(stage.getHeight());
+            }catch (NullPointerException nullPointerException) {
+
+            }
+        });
+
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {
-                sistema.saveData(indexController);
+                //sistema.saveData(indexController);
             }
         });
     }

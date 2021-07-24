@@ -1,22 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<Pane fx:id="refPane" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black; -fx-border-width: 3px;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.RefPane">
-      <Pane layoutY="51.0" prefHeight="346.0" prefWidth="600.0" style="-fx-border-color: black; -fx-border-width: 2px 0px 0px 0px;">
-         <Label layoutX="80.0" layoutY="17.0">Calorias</Label>
-         <Label layoutX="131.0" layoutY="17.0">Lipidos</Label>
-         <Label layoutX="185.0" layoutY="17.0">Carbohidratos</Label>
-         <Label layoutX="274.0" layoutY="17.0">Proteinas</Label>
-         <Button layoutX="243.0" layoutY="235.0" onMouseClicked="#showLista" text="Adiciona Alimento" />
-         <Label fx:id="cal" layoutX="87.0" layoutY="34.0" text="0" />
-         <Label fx:id="lip" layoutX="136.0" layoutY="34.0" text="0" />
-         <Label fx:id="carb" layoutX="209.0" layoutY="34.0" text="0" />
-         <Label fx:id="prot" layoutX="285.0" layoutY="34.0" text="0" />
-      </Pane>
-   <Label fx:id="title" layoutX="35.0" layoutY="21.0" />
-   <Button fx:id="clear" layoutX="536.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#clear" text="Clear" />
-   <Button fx:id="edit" layoutX="473.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#editAlim" text="Editar" />
-</Pane>
+<AnchorPane fx:id="refPane" minHeight="175.0" minWidth="400.0" prefHeight="175.0" prefWidth="156.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.RefPane">
+   <children>
+      <AnchorPane layoutX="2.0" layoutY="64.0" prefHeight="60.0" prefWidth="239.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="17.0" text="Calorias" />
+            <Label layoutX="64.0" layoutY="17.0" prefHeight="17.0" prefWidth="42.0" text="Lipidos" />
+            <Label layoutX="106.0" layoutY="17.0" prefHeight="17.0" prefWidth="77.0" text="Carbohidratos" />
+            <Label layoutX="190.0" layoutY="17.0" prefHeight="17.0" prefWidth="55.0" text="Proteinas" />
+            <Label fx:id="cal" layoutX="32.0" layoutY="43.0" text="0" />
+            <Label fx:id="lip" layoutX="82.0" layoutY="43.0" text="0" />
+            <Label fx:id="carb" layoutX="132.0" layoutY="43.0" text="0" />
+            <Label fx:id="prot" layoutX="214.0" layoutY="43.0" text="0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="title" layoutX="32.0" layoutY="16.0">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <AnchorPane layoutX="284.0" layoutY="2.0" prefWidth="149.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="18.0" onMouseClicked="#showLista" prefHeight="58.0" prefWidth="114.0" text="Adiciona Alimento" textFill="#b4b5bc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <stylesheets>
+                  <URL value="@../Stylesheets/buttons.css" />
+                  <URL value="@../Stylesheets/theme.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="text" />
+               </styleClass></Label>
+            <Label alignment="CENTER" layoutY="58.0" onMouseClicked="#editAlim" prefHeight="58.0" text="Editar" textFill="#b4b5bc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="58.0">
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="text" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@../Stylesheets/buttons.css" />
+                  <URL value="@../Stylesheets/theme.css" />
+               </stylesheets></Label>
+            <Label alignment="CENTER" layoutX="47.0" layoutY="116.0" onMouseClicked="#clear" prefHeight="58.0" text="Clear" textFill="#b4b5bc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="116.0">
+               <stylesheets>
+                  <URL value="@../Stylesheets/buttons.css" />
+                  <URL value="@../Stylesheets/theme.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="text" />
+               </styleClass></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

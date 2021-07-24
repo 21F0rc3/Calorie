@@ -1,4 +1,4 @@
-15
+17
 arroz,130,0.3,28,2.7
 massa,131,1.1,25,5
 bife de peru,152,2.5,0.1,28.3
@@ -14,3 +14,5 @@ Bife de Frango,98,0.5,3.7,20
 Whey Protein,382,5.7,6.7,76
 Batata Frita,312,15,41,3.4
 Febra de porco,287,20,0,25
+Cereais Chocapic,385,4.6,73.3,8.8
+Carne de vaca,220,12,0,26

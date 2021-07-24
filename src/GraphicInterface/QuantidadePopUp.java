@@ -5,6 +5,7 @@ import Classes.Counter;
 import Classes.Sistema;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -20,7 +21,7 @@ public class QuantidadePopUp {
     private RefPane refPaneController;
     private Index indexController;
 
-    @FXML private Button button;
+    @FXML private Label button;
     @FXML private TextField quantidade;
 
     /**
@@ -51,7 +52,7 @@ public class QuantidadePopUp {
             String ctProt = Float.toString(Math.round(ct.getProt() * 100.0f) / 100.0f);
 
             refPaneController.updateLabels(Integer.toString(c.getCal()), cLip, cCarb, cProt);
-            indexController.updateCounterTotalLabels(Integer.toString(ct.getCal()), ctLip,ctCarb,ctProt);
+            indexController.getInicioController().updateCounterTotalLabels(Integer.toString(ct.getCal()), ctLip,ctCarb,ctProt);
 
             Stage stage = (Stage) button.getScene().getWindow();
             stage.close();

@@ -71,7 +71,7 @@ public class EditRefAlimPopUp {
         String ctProt = Float.toString(Math.round(ct.getProt() * 100.0f) / 100.0f);
 
         refPaneController.updateLabels(Integer.toString(c.getCal()), cLip, cCarb, cProt);
-        indexController.updateCounterTotalLabels(Integer.toString(ct.getCal()), ctLip,ctCarb,ctProt);
+        indexController.getInicioController().updateCounterTotalLabels(Integer.toString(ct.getCal()), ctLip,ctCarb,ctProt);
 
         //Atualizar a lista
         alimentosRefController.lista.getItems().remove(selectedAlimento);

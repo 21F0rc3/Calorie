@@ -137,7 +137,7 @@ public class Sistema {
             int noRef = Integer.parseInt(br.readLine());
             for(int i=0; i<noRef; i++) {
                 String[] refTks = br.readLine().split(",");
-                int refId = index.adicionaRefeicao(refTks[0]);
+                int refId = index.getRefPaneController().adicionaRefeicao(refTks[0]);
                 Refeicao ref = searchRefeicao(refId);
 
                 int noAlim = Integer.parseInt(refTks[1]);
@@ -150,13 +150,13 @@ public class Sistema {
                 ref.getRefPaneController().updateLabels(counter.getCal()+"",counter.getLip()+"",counter.getCarb()+"",counter.getProt()+"");
             }
             Counter counterTotal = sistema.getCounterTotal();
-            index.updateCounterTotalLabels(counterTotal.getCal()+"",counterTotal.getLip()+"",counterTotal.getCarb()+"",counterTotal.getProt()+"");
+            index.getInicioController().updateCounterTotalLabels(counterTotal.getCal()+"",counterTotal.getLip()+"",counterTotal.getCarb()+"",counterTotal.getProt()+"");
 
             String[] userTks = br.readLine().split(",");
-            index.peso.setText(userTks[0]);
-            index.altura.setText(userTks[1]);
+            index.getPerfilController().peso.setText(userTks[0]);
+            index.getPerfilController().altura.setText(userTks[1]);
 
-            index.updatePeso();
+            index.getPerfilController().updatePeso();
         }catch (Exception e) {
             System.out.println("Sistema - loadData() : "+e.toString());
         }

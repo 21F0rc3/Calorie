@@ -46,7 +46,7 @@ public class AdicionaRefPopUp {
 
             //Adiciona novo refPane ao painel de refeiçoes do index
             int nrRef = indexRefPane.getChildren().size();
-            indexRefPane.add(parent,(nrRef)%2,(nrRef)/2);
+            indexRefPane.add(parent,(nrRef-1)%2,(nrRef-1)/2);
 
             Stage stage = (Stage)textField.getScene().getWindow();
             stage.close();

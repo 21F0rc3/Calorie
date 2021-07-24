@@ -4,15 +4,15 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.ListaAlimentos">
+<AnchorPane minWidth="430.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.ListaAlimentos">
    <children>
-      <TableView fx:id="lista" prefHeight="400.0" prefWidth="373.0">
+      <TableView fx:id="lista" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columns>
-          <TableColumn fx:id="nome" prefWidth="111.0" text="Nome" />
-          <TableColumn fx:id="cal" prefWidth="65.0" text="Kcal" />
-            <TableColumn fx:id="lip" prefWidth="65.0" text="Lip" />
-            <TableColumn fx:id="carb" prefWidth="65.0" text="Carb" />
-            <TableColumn fx:id="prot" prefWidth="65.0" text="Prot" />
+          <TableColumn fx:id="nome" maxWidth="-1.0" minWidth="150.0" prefWidth="-1.0" text="Nome" />
+          <TableColumn fx:id="cal" maxWidth="-1.0" minWidth="65.0" prefWidth="-1.0" text="Kcal" />
+            <TableColumn fx:id="lip" maxWidth="-1.0" minWidth="65.0" prefWidth="-1.0" text="Lip" />
+            <TableColumn fx:id="carb" maxWidth="-1.0" minWidth="65.0" prefWidth="-1.0" text="Carb" />
+            <TableColumn fx:id="prot" maxWidth="-1.0" minWidth="65.0" prefWidth="-1.0" text="Prot" />
         </columns>
       </TableView>
    </children>

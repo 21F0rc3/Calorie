@@ -113,7 +113,7 @@ public class RefPane {
         String ctCarb = Float.toString(Math.round(ct.getCarb() * 100.0f) / 100.0f);
         String ctProt = Float.toString(Math.round(ct.getProt() * 100.0f) / 100.0f);
 
-        indexController.updateCounterTotalLabels(Integer.toString(ct.getCal()), ctLip,ctCarb,ctProt);
+        indexController.getInicioController().updateCounterTotalLabels(Integer.toString(ct.getCal()), ctLip,ctCarb,ctProt);
     }
 
     /**
@@ -147,6 +147,6 @@ public class RefPane {
     }
 
     public void delete() {
-        indexController.delete(refPane);
+        indexController.getRefPaneController().delete(refPane);
     }
 }
