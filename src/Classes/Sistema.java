@@ -101,6 +101,16 @@ public class Sistema {
         return null;
     }
 
+    public ArrayList<Alimento> searchAlim(String search) {
+        ArrayList<Alimento> searchResult = new ArrayList<>();
+        for(Alimento alim : listaAlimentos) {
+            if(alim.getNome().contains(search)) {
+                searchResult.add(alim);
+            }
+        }
+        return searchResult;
+    }
+
     /**
      * Adiciona um alimento ao painel de refeicoes selecionado
      * @param refID - Id do painel
@@ -129,8 +139,13 @@ public class Sistema {
     }
 
     public void loadData(Index index) {
+        Date today = new Date();
+
         try{
-            File file = new File("C:\\Users\\Gabri\\OneDrive\\Ambiente de Trabalho\\Calorie\\src\\Assets\\data.txt");
+            File file = new File("C:\\Users\\Gabri\\OneDrive\\Ambiente de Trabalho\\Calorie\\src\\Assets\\Data\\"+today.toString()+".txt");
+            if(!file.exists()) {
+                throw new FileNotFoundException();
+            }
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
 
@@ -157,6 +172,9 @@ public class Sistema {
             index.getPerfilController().altura.setText(userTks[1]);
 
             index.getPerfilController().updatePeso();
+        }catch (FileNotFoundException fe) {
+            System.out.println("Sistema - loadData() : Novo dia! "+fe.toString());
+            saveData(index);
         }catch (Exception e) {
             System.out.println("Sistema - loadData() : "+e.toString());
         }
@@ -164,7 +182,8 @@ public class Sistema {
 
     public void saveData(Index index) {
         try{
-            File file = new File("C:\\Users\\Gabri\\OneDrive\\Ambiente de Trabalho\\Calorie\\src\\Assets\\data.txt");
+            Date today = new Date();
+            File file = new File("C:\\Users\\Gabri\\OneDrive\\Ambiente de Trabalho\\Calorie\\src\\Assets\\Data\\"+today.toString()+".txt");
             FileWriter fw = new FileWriter(file,false);
 
             int noRef = refeicoes.size();

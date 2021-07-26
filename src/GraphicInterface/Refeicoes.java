@@ -7,6 +7,8 @@ import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -18,6 +20,7 @@ public class Refeicoes {
 
     @FXML private GridPane refeicoes;
     @FXML private Pane refeicoesPane;
+    @FXML private ScrollPane scrollPane;
 
     private Index indexController;
 
@@ -126,8 +129,8 @@ public class Refeicoes {
     }
 
     public void setWidth(double newVal) {
-        refeicoesPane.setPrefWidth(newVal*0.9);
-        refeicoes.setPrefWidth(newVal*0.9);
+        refeicoesPane.setPrefWidth(newVal-171);
+        refeicoes.setPrefWidth(newVal-191);
     }
 
     public void setHeight(double newVal) {

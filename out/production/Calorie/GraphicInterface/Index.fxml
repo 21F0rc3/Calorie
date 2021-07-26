@@ -10,9 +10,9 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<HBox minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Index">
+<HBox minHeight="600.0" minWidth="971.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Index">
    <children>
-      <AnchorPane fx:id="menu" maxWidth="300.0" minHeight="600.0" minWidth="170.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css">
+      <AnchorPane fx:id="menu" maxWidth="171.0" minHeight="600.0" minWidth="171.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css">
          <children>
             <Label layoutY="287.0" maxWidth="1.7976931348623157E308" onMouseClicked="#Refeicoes" prefHeight="27.0" prefWidth="170.0" text="Refeições" textFill="#b4b5bc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <opaqueInsets>
@@ -34,21 +34,21 @@
                   <Font name="Comic Sans MS Bold" size="19.0" />
                </font>
             </Label>
-            <Label layoutX="3.0" layoutY="248.0" maxWidth="1.7976931348623157E308" onMouseClicked="#Inicio" prefHeight="27.0" prefWidth="170.0" text="Inicio" textFill="#b4b5bc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Label layoutX="3.0" layoutY="248.0" maxWidth="1.7976931348623157E308" onMouseClicked="#Inicio" prefHeight="27.0" prefWidth="170.0" text="Inicio" textFill="#b7bbbf" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
                <padding>
                   <Insets left="30.0" />
                </padding>
-               <styleClass>
-                  <String fx:value="button" />
-                  <String fx:value="text" />
-               </styleClass>
                <stylesheets>
                   <URL value="@../Stylesheets/buttons.css" />
                   <URL value="@../Stylesheets/theme.css" />
-               </stylesheets></Label>
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="text" />
+               </styleClass></Label>
             <Label layoutY="325.0" maxWidth="1.7976931348623157E308" onMouseClicked="#Perfil" prefHeight="27.0" prefWidth="170.0" text="Perfil" textFill="#b4b5bc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <padding>
                   <Insets left="30.0" />
@@ -63,24 +63,24 @@
                </styleClass></Label>
             <Group fx:id="inicioBar" layoutY="248.0" visible="false">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" width="164.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="BLACK" strokeType="INSIDE" width="7.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.35" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="164.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="#575151" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
                </children>
             </Group>
             <Group fx:id="refeicoesBar" layoutY="287.0" visible="false">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" width="164.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="BLACK" strokeType="INSIDE" width="7.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="164.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
                </children>
             </Group>
             <Group fx:id="perfilBar" layoutY="325.0" visible="false">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" width="164.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="BLACK" strokeType="INSIDE" width="7.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="164.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
                </children>
             </Group>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="conteudo" minHeight="600.0" minWidth="630.0" />
+      <AnchorPane fx:id="conteudo" minHeight="600.0" minWidth="800.0" />
    </children>
 </HBox>

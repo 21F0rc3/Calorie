@@ -36,7 +36,7 @@ public class Index {
     private Refeicoes refPaneController;
     private Perfil perfilController;
 
-    public void Inicio(MouseEvent ex) {
+    public void Inicio() {
         inicioBar.setVisible(true);
         refeicoesBar.setVisible(false);
         perfilBar.setVisible(false);
@@ -60,7 +60,7 @@ public class Index {
         conteudo.getChildren().add(inicioPane);
     }
 
-    public void Refeicoes(MouseEvent ex) {
+    public void Refeicoes() {
         inicioBar.setVisible(false);
         refeicoesBar.setVisible(true);
         perfilBar.setVisible(false);
@@ -87,7 +87,7 @@ public class Index {
         conteudo.getChildren().add(refeicoesPane);
     }
 
-    public void Perfil(MouseEvent ex) {
+    public void Perfil() {
         inicioBar.setVisible(false);
         refeicoesBar.setVisible(false);
         perfilBar.setVisible(true);
@@ -120,6 +120,10 @@ public class Index {
 
     public Perfil getPerfilController() {
         return this.perfilController;
+    }
+
+    public AnchorPane getConteudo() {
+        return this.conteudo;
     }
 
     public AnchorPane getMenu() {return this.menu;}

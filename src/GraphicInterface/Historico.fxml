@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane minHeight="600.0" minWidth="630.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="28.0" layoutY="29.0" minHeight="320.0" minWidth="630.0" prefHeight="320.0" prefWidth="630.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AreaChart prefHeight="257.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </AreaChart>
+            <DatePicker layoutX="512.0" layoutY="20.0" minHeight="25.0" minWidth="104.0" prefHeight="25.0" prefWidth="104.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="20.0" />
+            <DatePicker layoutX="373.0" layoutY="20.0" minHeight="25.0" minWidth="104.0" prefHeight="25.0" prefWidth="104.0" AnchorPane.rightAnchor="153.0" AnchorPane.topAnchor="20.0" />
+            <Label layoutX="336.0" layoutY="24.0" text="From:" AnchorPane.rightAnchor="264.0" AnchorPane.topAnchor="24.0" />
+            <Label layoutX="489.0" layoutY="24.0" text="To:" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="24.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="320.0" prefHeight="280.0" prefWidth="315.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <BarChart layoutX="-103.0" layoutY="-102.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="315.0" layoutY="330.0" prefHeight="280.0" prefWidth="315.0">
+         <children>
+            <PieChart AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -52,7 +52,7 @@ public class Inicio {
     }
 
     public void setWidth(double newVal) {
-        inicioPane.setPrefWidth(newVal*0.9);
+        inicioPane.setPrefWidth(newVal-171);
     }
 
     public void setHeight(double newVal) {

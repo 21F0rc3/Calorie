@@ -54,7 +54,7 @@ public class Perfil {
     }
 
     public void setWidth(double newVal) {
-        perfilPane.setPrefWidth(newVal*0.9);
+        perfilPane.setPrefWidth(newVal-171);
     }
 
     public void setHeight(double newVal) {

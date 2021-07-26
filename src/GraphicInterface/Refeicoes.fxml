@@ -10,14 +10,14 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane fx:id="refeicoesPane" minHeight="600.0" minWidth="630.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Refeicoes">
+<AnchorPane fx:id="refeicoesPane" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Refeicoes">
    <children>
-      <ScrollPane hbarPolicy="NEVER" layoutY="50.0" minWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutY="50.0" minWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <content>
-            <GridPane fx:id="refeicoes" alignment="CENTER" gridLinesVisible="true" hgap="10.0" minWidth="630.0">
+            <GridPane fx:id="refeicoes" alignment="CENTER" gridLinesVisible="true" hgap="10.0" minWidth="800.0">
               <columnConstraints>
-                <ColumnConstraints hgrow="ALWAYS" percentWidth="50.0" />
-                <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                <ColumnConstraints hgrow="NEVER" percentWidth="50.0" />
+                <ColumnConstraints hgrow="NEVER" percentWidth="50.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints maxHeight="175.0" minHeight="175.0" prefHeight="175.0" vgrow="ALWAYS" />
@@ -28,9 +28,9 @@
             </GridPane>
          </content>
       </ScrollPane>
-      <AnchorPane layoutX="2.0" layoutY="14.0" minHeight="50.0" minWidth="630.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="2.0" layoutY="14.0" minHeight="50.0" minWidth="800.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="12.0" maxWidth="166.0" onMouseClicked="#adicionaRefeicao" style="-fx-font-size: 150%;" text="Adiciona Refeições" textFill="#b4b5bc" AnchorPane.leftAnchor="145.0" AnchorPane.topAnchor="12.0">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="12.0" maxWidth="166.0" onMouseClicked="#adicionaRefeicao" style="-fx-font-size: 150%;" text="Adiciona Refeições" textFill="#b4b5bc" AnchorPane.leftAnchor="166.0" AnchorPane.topAnchor="12.0">
                <stylesheets>
                   <URL value="@../Stylesheets/theme.css" />
                   <URL value="@../Stylesheets/buttons.css" />

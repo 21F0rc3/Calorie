@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -21,6 +22,8 @@ public class ListaAlimentos {
     private Index indexController;
 
     @FXML private TableView<Alimento> lista;
+
+    @FXML private TextField searchBar;
 
     @FXML private TableColumn<Alimento,String> nome;
     @FXML private TableColumn<Alimento,Integer> cal;
@@ -92,5 +95,33 @@ public class ListaAlimentos {
         refPane = p;
         refPaneController = r;
         indexController = i;
+    }
+
+    public void procuraAlimento() {
+        String alimento = searchBar.getText();
+
+        lista.getItems().clear();
+
+        lista.setRowFactory(tv -> {
+            TableRow<Alimento> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (!row.isEmpty()) {
+                    alimentoSelect(row.getItem());
+                }
+            });
+            return row ;
+        });
+
+        nome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        cal.setCellValueFactory(new PropertyValueFactory<>("cal"));
+        lip.setCellValueFactory(new PropertyValueFactory<>("lip"));
+        carb.setCellValueFactory(new PropertyValueFactory<>("carb"));
+        prot.setCellValueFactory(new PropertyValueFactory<>("prot"));
+
+        for(Alimento a : sistema.searchAlim(alimento)) {
+            lista.getItems().add(a);
+        }
+
+        sistema.searchAlim(alimento);
     }
 }

@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -28,6 +29,10 @@ public class Main extends Application {
         //Para passar todos os controladores e scenes necessarios a nova stage
         Index indexController = loader.getController();
 
+        indexController.Perfil();
+        indexController.Refeicoes();
+        indexController.Inicio();
+
         //sistema.loadData(indexController);
 
         Scene scene = new Scene(parent);
@@ -35,7 +40,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
 
-        stage.setMinWidth(800);
+        stage.setMinWidth(971);
         stage.setMinHeight(600);
 
         stage.widthProperty().addListener((obs, oldVal, newVal) -> {
@@ -43,8 +48,6 @@ public class Main extends Application {
                 indexController.getRefPaneController().setWidth(stage.getWidth());
                 indexController.getInicioController().setWidth(stage.getWidth());
                 indexController.getPerfilController().setWidth(stage.getWidth());
-
-                indexController.getMenu().setPrefWidth(stage.getWidth()*0.1);
             }catch (NullPointerException nullPointerException) {
                 
             }
