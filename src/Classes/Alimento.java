@@ -19,7 +19,7 @@ public class Alimento {
     this.prot = prot;
   }
 
-  protected Alimento(Alimento a, int qty) {
+  public Alimento(Alimento a, int qty) {
     this.id = a.getId();
     this.nome = a.getNome();
     this.qty = qty;

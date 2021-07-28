@@ -30,16 +30,19 @@ public class Index {
     @FXML private Group inicioBar;
     @FXML private Group refeicoesBar;
     @FXML private Group perfilBar;
+    @FXML private Group historicoBar;
 
-    private Pane inicioPane, perfilPane, refeicoesPane;
+    private Pane inicioPane, perfilPane, refeicoesPane, historicoPane;
     private Inicio inicioController;
     private Refeicoes refPaneController;
     private Perfil perfilController;
+    private Historico historicoController;
 
     public void Inicio() {
         inicioBar.setVisible(true);
         refeicoesBar.setVisible(false);
         perfilBar.setVisible(false);
+        historicoBar.setVisible(false);
 
         if(inicioController==null) {
             try {
@@ -64,6 +67,7 @@ public class Index {
         inicioBar.setVisible(false);
         refeicoesBar.setVisible(true);
         perfilBar.setVisible(false);
+        historicoBar.setVisible(false);
 
         if(refPaneController==null) {
             try {
@@ -91,6 +95,7 @@ public class Index {
         inicioBar.setVisible(false);
         refeicoesBar.setVisible(false);
         perfilBar.setVisible(true);
+        historicoBar.setVisible(false);
 
         if(perfilController==null) {
             try {
@@ -110,6 +115,30 @@ public class Index {
         conteudo.getChildren().add(perfilPane);
     }
 
+    public void Historico() {
+        inicioBar.setVisible(false);
+        refeicoesBar.setVisible(false);
+        perfilBar.setVisible(false);
+        historicoBar.setVisible(true);
+
+        if(historicoController==null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Historico.fxml"));
+                Pane parent = loader.load();
+
+                Historico historico = loader.getController();
+                historico.setPrimals(this);
+
+                historicoPane = parent;
+                historicoController = historico;
+            } catch (Exception e) {
+                System.out.println("Index - Historico(): " + e.toString());
+            }
+        }
+        conteudo.getChildren().clear();
+        conteudo.getChildren().add(historicoPane);
+    }
+
     public Refeicoes getRefPaneController() {
         return this.refPaneController;
     }
@@ -121,6 +150,8 @@ public class Index {
     public Perfil getPerfilController() {
         return this.perfilController;
     }
+
+    public Historico getHistoricoController() { return this.historicoController;}
 
     public AnchorPane getConteudo() {
         return this.conteudo;

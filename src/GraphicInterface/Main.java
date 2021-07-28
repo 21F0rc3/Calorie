@@ -48,6 +48,7 @@ public class Main extends Application {
                 indexController.getRefPaneController().setWidth(stage.getWidth());
                 indexController.getInicioController().setWidth(stage.getWidth());
                 indexController.getPerfilController().setWidth(stage.getWidth());
+                indexController.getHistoricoController().setWidth(stage.getWidth());
             }catch (NullPointerException nullPointerException) {
                 
             }
@@ -58,6 +59,7 @@ public class Main extends Application {
                 indexController.getRefPaneController().setHeight(stage.getHeight());
                 indexController.getInicioController().setHeight(stage.getHeight());
                 indexController.getPerfilController().setHeight(stage.getHeight());
+                indexController.getHistoricoController().setHeight(stage.getHeight());
             }catch (NullPointerException nullPointerException) {
 
             }

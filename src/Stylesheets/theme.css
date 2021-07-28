@@ -2,6 +2,18 @@
     -fx-background-color: #5beb8b;
 }
 
+.background-secondary {
+    -fx-background-color: white;
+}
+
+.background-terciary  {
+    -fx-background-color: #b0fcca;
+}
+
 .text {
     -fx-text-fill: #ffffff;
+}
+
+.card {
+    -fx-background-color: white;
 }
