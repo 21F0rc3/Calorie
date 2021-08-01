@@ -15,6 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -32,11 +33,80 @@ public class Index {
     @FXML private Group perfilBar;
     @FXML private Group historicoBar;
 
+    //@FXML private WebView logo;
+
     private Pane inicioPane, perfilPane, refeicoesPane, historicoPane;
     private Inicio inicioController;
     private Refeicoes refPaneController;
     private Perfil perfilController;
     private Historico historicoController;
+
+    public void Start() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Inicio.fxml"));
+            Pane parent = loader.load();
+
+            Inicio inicio = loader.getController();
+            inicio.setPrimals(this);
+
+            inicioPane = parent;
+            inicioController = inicio;
+
+            conteudo.getChildren().add(inicioPane);
+        } catch (Exception e) {
+            System.out.println("Index - Inicio(): " + e.toString());
+        }
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Refeicoes.fxml"));
+            Pane parent = loader.load();
+
+            Refeicoes ref = loader.getController();
+            ref.setPrimals(this);
+
+            parent.setPrefWidth(conteudo.getWidth());
+            parent.setPrefHeight(conteudo.getHeight());
+
+            refeicoesPane = parent;
+            refPaneController = ref;
+
+            conteudo.getChildren().add(refeicoesPane);
+        } catch (Exception e) {
+            System.out.println("Index - Refeicoes(): " + e.toString());
+        }
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Perfil.fxml"));
+            Pane parent = loader.load();
+
+            Perfil perfil = loader.getController();
+            perfil.setPrimals(this);
+
+            perfilPane = parent;
+            perfilController = perfil;
+
+            conteudo.getChildren().add(perfilPane);
+        } catch (Exception e) {
+            System.out.println("Index - Perfil(): " + e.toString());
+        }
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Historico.fxml"));
+            Pane parent = loader.load();
+
+            Historico historico = loader.getController();
+            historico.setPrimals(this);
+
+            historicoPane = parent;
+            historicoController = historico;
+
+            conteudo.getChildren().add(historicoPane);
+        } catch (Exception e) {
+            System.out.println("Index - Historico(): " + e.toString());
+        }
+
+        Inicio();
+    }
 
     public void Inicio() {
         inicioBar.setVisible(true);
@@ -44,23 +114,10 @@ public class Index {
         perfilBar.setVisible(false);
         historicoBar.setVisible(false);
 
-        if(inicioController==null) {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("Inicio.fxml"));
-                Pane parent = loader.load();
-
-                Inicio inicio = loader.getController();
-                inicio.setPrimals(this);
-
-                inicioPane = parent;
-                inicioController = inicio;
-
-            } catch (Exception e) {
-                System.out.println("Index - Inicio(): " + e.toString());
-            }
-        }
-        conteudo.getChildren().clear();
-        conteudo.getChildren().add(inicioPane);
+        inicioPane.setVisible(true);
+        refeicoesPane.setVisible(false);
+        perfilPane.setVisible(false);
+        historicoPane.setVisible(false);
     }
 
     public void Refeicoes() {
@@ -69,26 +126,10 @@ public class Index {
         perfilBar.setVisible(false);
         historicoBar.setVisible(false);
 
-        if(refPaneController==null) {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("Refeicoes.fxml"));
-                Pane parent = loader.load();
-
-                Refeicoes ref = loader.getController();
-                ref.setPrimals(this);
-
-                parent.setPrefWidth(conteudo.getWidth());
-                parent.setPrefHeight(conteudo.getHeight());
-
-                refeicoesPane = parent;
-                refPaneController = ref;
-
-            } catch (Exception e) {
-                System.out.println("Index - Refeicoes(): " + e.toString());
-            }
-        }
-        conteudo.getChildren().clear();
-        conteudo.getChildren().add(refeicoesPane);
+        inicioPane.setVisible(false);
+        refeicoesPane.setVisible(true);
+        perfilPane.setVisible(false);
+        historicoPane.setVisible(false);
     }
 
     public void Perfil() {
@@ -97,22 +138,10 @@ public class Index {
         perfilBar.setVisible(true);
         historicoBar.setVisible(false);
 
-        if(perfilController==null) {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("Perfil.fxml"));
-                Pane parent = loader.load();
-
-                Perfil perfil = loader.getController();
-                perfil.setPrimals(this);
-
-                perfilPane = parent;
-                perfilController = perfil;
-            } catch (Exception e) {
-                System.out.println("Index - Perfil(): " + e.toString());
-            }
-        }
-        conteudo.getChildren().clear();
-        conteudo.getChildren().add(perfilPane);
+        inicioPane.setVisible(false);
+        refeicoesPane.setVisible(false);
+        perfilPane.setVisible(true);
+        historicoPane.setVisible(false);
     }
 
     public void Historico() {
@@ -121,22 +150,10 @@ public class Index {
         perfilBar.setVisible(false);
         historicoBar.setVisible(true);
 
-        if(historicoController==null) {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("Historico.fxml"));
-                Pane parent = loader.load();
-
-                Historico historico = loader.getController();
-                historico.setPrimals(this);
-
-                historicoPane = parent;
-                historicoController = historico;
-            } catch (Exception e) {
-                System.out.println("Index - Historico(): " + e.toString());
-            }
-        }
-        conteudo.getChildren().clear();
-        conteudo.getChildren().add(historicoPane);
+        inicioPane.setVisible(false);
+        refeicoesPane.setVisible(false);
+        perfilPane.setVisible(false);
+        historicoPane.setVisible(true);
     }
 
     public Refeicoes getRefPaneController() {
@@ -152,6 +169,11 @@ public class Index {
     }
 
     public Historico getHistoricoController() { return this.historicoController;}
+
+    public void close() {
+        Stage stage = (Stage) conteudo.getScene().getWindow();
+        stage.close();
+    }
 
     public AnchorPane getConteudo() {
         return this.conteudo;

@@ -8,7 +8,7 @@
 
 <AnchorPane fx:id="historicoPane" minHeight="600.0" minWidth="800.0" stylesheets="@../Stylesheets/theme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Historico">
    <children>
-      <AnchorPane layoutX="377.0" layoutY="14.0" prefHeight="74.0" prefWidth="239.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="377.0" layoutY="14.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="800.0" prefHeight="94.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label alignment="CENTER" layoutX="14.0" layoutY="21.0" styleClass="text" text="#Historico" AnchorPane.leftAnchor="14.0">
                <font>
@@ -27,6 +27,9 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </AnchorPane>
-      <AnchorPane fx:id="calGraph" layoutX="13.0" layoutY="109.0" prefHeight="477.0" prefWidth="772.0" styleClass="card" stylesheets="@../Stylesheets/theme.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="109.0" />
+      <AnchorPane layoutX="13.0" layoutY="109.0" minHeight="506.0" minWidth="800.0" styleClass="background-secondary" stylesheets="@../Stylesheets/theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="94.0">
+         <children>
+            <AnchorPane fx:id="calGraph" layoutX="14.0" layoutY="33.0" minHeight="466.0" minWidth="760.0" styleClass="card" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+         </children></AnchorPane>
    </children>
 </AnchorPane>

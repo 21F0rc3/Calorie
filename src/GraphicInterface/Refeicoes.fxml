@@ -12,7 +12,7 @@
 
 <AnchorPane fx:id="refeicoesPane" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Refeicoes">
    <children>
-      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutY="50.0" minWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutY="50.0" minWidth="800.0" styleClass="background-secondary" stylesheets="@../Stylesheets/theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <content>
             <GridPane fx:id="refeicoes" alignment="CENTER" gridLinesVisible="true" hgap="10.0" minWidth="800.0">
               <columnConstraints>
@@ -30,23 +30,23 @@
       </ScrollPane>
       <AnchorPane layoutX="2.0" layoutY="14.0" minHeight="50.0" minWidth="800.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="12.0" maxWidth="166.0" onMouseClicked="#adicionaRefeicao" style="-fx-font-size: 150%;" text="Adiciona Refeições" textFill="#b4b5bc" AnchorPane.leftAnchor="166.0" AnchorPane.topAnchor="12.0">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="180.0" onMouseClicked="#adicionaRefeicao" text="Adiciona Refeições" textFill="#b4b5bc" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="0.0">
                <stylesheets>
                   <URL value="@../Stylesheets/theme.css" />
                   <URL value="@../Stylesheets/buttons.css" />
                </stylesheets>
                <styleClass>
                   <String fx:value="button" />
-                  <String fx:value="text" />
+                  <String fx:value="text-primary" />
                </styleClass></Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="344.0" layoutY="12.0" maxWidth="143.0" onMouseClicked="#editaRefeicao" style="-fx-font-size: 150%;" text="Editar Refeições" textFill="#b4b5bc" AnchorPane.rightAnchor="143.0" AnchorPane.topAnchor="12.0">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="428.0" onMouseClicked="#editaRefeicao" text="Editar Refeições" textFill="#b4b5bc" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="184.0" AnchorPane.topAnchor="0.0">
                <stylesheets>
                   <URL value="@../Stylesheets/theme.css" />
                   <URL value="@../Stylesheets/buttons.css" />
                </stylesheets>
                <styleClass>
                   <String fx:value="button" />
-                  <String fx:value="text" />
+                  <String fx:value="text-primary" />
                </styleClass>
             </Label>
          </children>

@@ -6,20 +6,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="perfilPane" minHeight="600.0" minWidth="630.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Perfil">
+
+<AnchorPane minHeight="600.0" minWidth="800.0" styleClass="background-secondary" stylesheets="@../Stylesheets/theme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Perfil">
    <children>
-      <Label layoutX="50.0" layoutY="71.0" text="Peso:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="71.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="50.0" layoutY="178.0" text="Altura:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="178.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <TextField fx:id="peso" layoutX="151.0" layoutY="76.0" onKeyTyped="#updatePeso" AnchorPane.leftAnchor="151.0" AnchorPane.topAnchor="76.0" />
-      <TextField fx:id="altura" layoutX="151.0" layoutY="183.0" onKeyTyped="#updateAltura" AnchorPane.leftAnchor="151.0" AnchorPane.topAnchor="183.0" />
-      <PieChart fx:id="pieChart" layoutX="325.0" prefHeight="308.0" prefWidth="305.0" AnchorPane.bottomAnchor="292.0" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="perfilPane" minHeight="540.0" minWidth="740.0" styleClass="card" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label layoutX="50.0" layoutY="71.0" text="Peso:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="71.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="178.0" text="Altura:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="178.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="peso" layoutX="151.0" layoutY="76.0" onKeyTyped="#updatePeso" AnchorPane.leftAnchor="151.0" AnchorPane.topAnchor="76.0" />
+            <TextField fx:id="altura" layoutX="151.0" layoutY="183.0" onKeyTyped="#updateAltura" AnchorPane.leftAnchor="151.0" AnchorPane.topAnchor="183.0" />
+            <PieChart fx:id="pieChart" layoutX="325.0" prefHeight="308.0" prefWidth="305.0" AnchorPane.bottomAnchor="232.0" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
