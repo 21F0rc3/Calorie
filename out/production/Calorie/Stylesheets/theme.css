@@ -1,19 +1,112 @@
 .background-primary {
-    -fx-background-color: #5beb8b;
+    -fx-background-color: #676767;
 }
 
 .background-secondary {
-    -fx-background-color: white;
+    -fx-background-color: linear-gradient(from 41px 34px to 50px 50px, reflect,  #ff7f50 30%, #faebd7  47%);
 }
 
-.background-terciary  {
-    -fx-background-color: #b0fcca;
+.background-tertiary {
+    -fx-background-color: #e5e5e5;
 }
 
-.text {
-    -fx-text-fill: #ffffff;
+.text-primary {
+    -fx-font-size: 20px;
+    -fx-text-fill: #292929;
+    -fx-font-family: Verdana;
+}
+
+.text-secondary {
+    -fx-text-fill: #e0dfdf;
+    -fx-font-size: 13px;
+    -fx-font-family: Verdana;
+}
+
+.text-terciary {
+    -fx-font-size: 12px;
+    -fx-text-fill: #292929;
+    -fx-font-family: Verdana;
 }
 
 .card {
-    -fx-background-color: white;
+    /*-fx-background-color: linear-gradient(from 41px 34px to 50px 50px, reflect,  #676767 30%, #454545 47%);*/
+    -fx-background-color: #fafafa;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+
+.text-field-secondary {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 1 1 1 1 ;
+    -fx-background-radius: 0 ;
+}
+
+.text-field-secondary:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+
+.date-picker {
+    -fx-background-insets: 0, 0 0 1 0;
+}
+
+.date-picker:focused {
+    -fx-border-color: rgba(255, 127, 80, 0.8);
+    -fx-border-width: 3px;
+}
+
+.progress-bar .bar{
+    -fx-padding: 10px;
+    -fx-background-insets: 0;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+
+.calBar {
+    -fx-accent: green;
+}
+
+.lipBar {
+    -fx-accent: red;
+}
+
+.carbBar {
+    -fx-accent: yellow;
+}
+
+.protBar {
+    -fx-accent: blue;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+.table-row-cell:hover {
+    -fx-background-color: #93f9b911;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-opacity: 0;
+}
+
+.head {
+    -fx-background-color: transparent;
 }

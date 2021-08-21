@@ -1,4 +1,4 @@
-31
+33
 arroz,130,0.3,28,2.7
 massa,131,1.1,25,5
 bife de peru,152,2.5,0.1,28.3
@@ -30,3 +30,5 @@ Flocos de aveia,376,6.5,62,11.8
 Kit-Kat,518,26,65,7
 Panado de frango,297,18.82,16.32,15.39
 Muesli Chocolate,434,16,61,8.4
+mousse,213,5.4,34,5.2
+Bolachas de milho,476,21,64,6

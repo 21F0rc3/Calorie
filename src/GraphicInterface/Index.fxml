@@ -15,7 +15,7 @@
 
 <HBox minHeight="600.0" minWidth="971.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Index">
    <children>
-      <AnchorPane fx:id="menu" maxWidth="-Infinity" minHeight="600.0" minWidth="-Infinity" prefWidth="171.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css">
+      <AnchorPane fx:id="menu" maxWidth="171.0" minHeight="600.0" minWidth="171.0" prefWidth="171.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css">
          <children>
             <Label layoutY="287.0" maxWidth="1.7976931348623157E308" onMouseClicked="#Refeicoes" prefHeight="27.0" prefWidth="170.0" text="Refeições" textFill="#b4b5bc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <opaqueInsets>
@@ -52,7 +52,7 @@
                   <Font name="Verdana" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="3.0" layoutY="325.0" maxWidth="1.7976931348623157E308" onMouseClicked="#Perfil" prefHeight="27.0" prefWidth="170.0" text="Perfil" textFill="#b4b5bc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Label layoutX="3.0" layoutY="325.0" maxWidth="1.7976931348623157E308" onMouseClicked="#Perfil" prefHeight="27.0" prefWidth="170.0" text="Perfil" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <padding>
                   <Insets left="30.0" />
                </padding>
@@ -81,25 +81,25 @@
             <Group fx:id="inicioBar" layoutY="248.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.35" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="164.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="#575151" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f68207" height="27.0" stroke="#575151" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
                </children>
             </Group>
             <Group fx:id="refeicoesBar" layoutY="287.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="164.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f68207" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
                </children>
             </Group>
             <Group fx:id="perfilBar" layoutY="325.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="164.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f68207" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
                </children>
             </Group>
             <Group fx:id="historicoBar" layoutY="363.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutX="7.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="164.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7bbbf" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f68207" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
                </children>
             </Group>
             <ImageView fitHeight="154.0" fitWidth="171.0" layoutX="9.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0">

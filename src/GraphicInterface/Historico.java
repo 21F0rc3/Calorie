@@ -92,11 +92,13 @@ public class Historico {
 
     public void setWidth(double newVal) {
         historicoPane.setPrefWidth(newVal-171);
+        calGraph.setPrefWidth(historicoPane.getWidth()-55);
         areaChart.setPrefWidth(calGraph.getWidth());
     }
 
     public void setHeight(double newVal) {
         historicoPane.setPrefHeight(newVal);
+        calGraph.setPrefHeight(historicoPane.getHeight()-164);
         areaChart.setPrefHeight(calGraph.getHeight());
     }
 }

@@ -12,6 +12,7 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.util.ArrayList;
 
@@ -34,6 +35,7 @@ public class Refeicoes {
     public void adicionaRefeicao() {
         try {
             Stage popup = new Stage();
+            popup.initStyle(StageStyle.UNDECORATED);
             popup.setTitle("Adicionar refeição");
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("AdicionaRefPopUp.fxml"));
@@ -56,6 +58,7 @@ public class Refeicoes {
     public void editaRefeicao() {
         try {
             Stage popup = new Stage();
+            popup.initStyle(StageStyle.UNDECORATED);
             popup.setTitle("Edita refeição");
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("EditRefPopUp.fxml"));

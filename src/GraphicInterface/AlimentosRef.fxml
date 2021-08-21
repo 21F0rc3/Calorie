@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.AlimentosRef">
+<AnchorPane prefHeight="400.0" prefWidth="448.0" stylesheets="@../Stylesheets/theme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.AlimentosRef">
    <children>
-      <TableView fx:id="lista" prefHeight="400.0" prefWidth="461.0">
+      <AnchorPane minHeight="30.0" styleClass="background-primary" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label onMouseClicked="#close" stylesheets="@../Stylesheets/buttons.css" text="X" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+               <styleClass>
+                  <String fx:value="text-secondary" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="10.0" styleClass="background-secondary" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+      <TableView fx:id="lista" layoutY="50.0" prefHeight="410.0" prefWidth="461.0" styleClass="background-tertiary" AnchorPane.topAnchor="40.0">
         <columns>
-          <TableColumn fx:id="nome" prefWidth="75.0" text="Nome" />
-          <TableColumn fx:id="qty" prefWidth="75.0" text="Quantidade" />
-            <TableColumn fx:id="cal" prefWidth="75.0" text="Calorias" />
-            <TableColumn fx:id="lip" prefWidth="75.0" text="Lipidos" />
-            <TableColumn fx:id="carb" prefWidth="92.0" text="Carbohidratos" />
-            <TableColumn fx:id="prot" prefWidth="67.0" text="Proteinas" />
+          <TableColumn fx:id="nome" prefWidth="75.0" styleClass="head" text="Nome" />
+          <TableColumn fx:id="qty" prefWidth="75.0" styleClass="head" text="Quantidade" />
+            <TableColumn fx:id="cal" prefWidth="75.0" styleClass="head" text="Calorias" />
+            <TableColumn fx:id="lip" prefWidth="75.0" styleClass="head" text="Lipidos" />
+            <TableColumn fx:id="carb" prefWidth="92.0" styleClass="head" text="Carbohidratos" />
+            <TableColumn fx:id="prot" prefWidth="67.0" styleClass="head" text="Proteinas" />
         </columns>
       </TableView>
    </children>

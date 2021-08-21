@@ -9,6 +9,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import javax.swing.text.html.ListView;
 
@@ -48,5 +49,10 @@ public class EditRefPopUp {
 
     public void setPrimals(Index i) {
         this.indexController = i;
+    }
+
+    public void close() {
+        Stage stage = (Stage)lista.getScene().getWindow();
+        stage.close();
     }
 }

@@ -105,4 +105,9 @@ public class AlimentosRef {
             System.out.println("AlimentosRef - alimentoSelect() : "+ e.toString());
         }
     }
+
+    public void close() {
+        Stage stage = (Stage)lista.getScene().getWindow();
+        stage.close();
+    }
 }

@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class ListaAlimentos {
     private final Sistema sistema = Sistema.getInstance();
@@ -76,6 +77,7 @@ public class ListaAlimentos {
 
             Scene cena = new Scene(parent);
 
+            popup.initStyle(StageStyle.UNDECORATED);
             popup.setTitle("Quantidade");
             popup.setScene(cena);
             popup.show();
@@ -123,5 +125,10 @@ public class ListaAlimentos {
         }
 
         sistema.searchAlim(alimento);
+    }
+
+    public void close() {
+        Stage stage = (Stage)lista.getScene().getWindow();
+        stage.close();
     }
 }

@@ -36,7 +36,7 @@ public class Main extends Application {
 
         indexController.Start();
 
-        //sistema.loadData(indexController);
+        sistema.loadData(indexController);
 
         Scene scene = new Scene(parent);
 
@@ -70,7 +70,7 @@ public class Main extends Application {
 
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {
-                //sistema.saveData(indexController);
+                sistema.saveData(indexController);
             }
         });
     }

@@ -1,26 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.EditRefPopUp">
+<AnchorPane minHeight="250.0" minWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.EditRefPopUp">
    <children>
-      <TableView fx:id="lista" layoutX="50.0" layoutY="49.0" prefHeight="251.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="49.0">
+      <TableView fx:id="lista" layoutX="50.0" layoutY="41.0" prefHeight="265.0" prefWidth="300.0" styleClass="background-tertiary" stylesheets="@../Stylesheets/theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0">
         <columns>
-          <TableColumn fx:id="nome" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" text="Refeições" />
+          <TableColumn fx:id="nome" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0" />
         </columns>
       </TableView>
-      <Label alignment="CENTER" layoutX="60.0" layoutY="28.0" prefHeight="79.0" prefWidth="300.0" stylesheets="@../Stylesheets/theme.css" text="ELIMINAR REFEIÇÃO" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-         <styleClass>
-            <String fx:value="background-primary" />
-            <String fx:value="text" />
-         </styleClass></Label>
+      <AnchorPane minHeight="55.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="121.0" layoutY="18.0" styleClass="text-secondary" stylesheets="@../Stylesheets/theme.css" text="Refeições" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="265.0" layoutY="14.0" onMouseClicked="#close" text="X" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="16.0">
+               <stylesheets>
+                  <URL value="@../Stylesheets/theme.css" />
+                  <URL value="@../Stylesheets/buttons.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="text-secondary" />
+               </styleClass>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="10.0" styleClass="background-secondary" stylesheets="@../Stylesheets/theme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0" />
    </children>
 </AnchorPane>

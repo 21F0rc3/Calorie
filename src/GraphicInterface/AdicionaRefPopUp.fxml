@@ -7,32 +7,52 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.AdicionaRefPopUp">
+<AnchorPane minHeight="250.0" minWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.AdicionaRefPopUp">
    <children>
-      <Label alignment="CENTER" prefHeight="79.0" prefWidth="300.0" stylesheets="@../Stylesheets/theme.css" text="ADICIONAR NOVA REFEIÇÃO" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane minHeight="55.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="259.0" layoutY="16.0" onMouseClicked="#close" text="X" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="16.0">
+               <stylesheets>
+                  <URL value="@../Stylesheets/theme.css" />
+                  <URL value="@../Stylesheets/buttons.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="text-secondary" />
+               </styleClass>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="10.0" prefWidth="200.0" styleClass="background-secondary" stylesheets="@../Stylesheets/theme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0" />
+      <Label alignment="CENTER" layoutX="15.0" layoutY="101.0" styleClass="text-terciary" stylesheets="@../Stylesheets/theme.css" text="Nome da refeição" AnchorPane.leftAnchor="15.0">
          <font>
             <Font size="14.0" />
          </font>
-         <styleClass>
-            <String fx:value="text" />
-            <String fx:value="background-primary" />
-         </styleClass>
       </Label>
-      <TextField fx:id="textField" layoutX="137.0" layoutY="138.0" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="138.0" />
-      <Label layoutX="25.0" layoutY="142.0" text="Nome da refeição" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="142.0" />
-      <Label layoutX="103.0" layoutY="233.0" onMouseClicked="#adiciona" text="Adiciona" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="103.0" AnchorPane.rightAnchor="103.0">
+      <TextField fx:id="textField" layoutX="15.0" layoutY="125.0" styleClass="text-field-secondary" stylesheets="@../Stylesheets/theme.css" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Label layoutX="213.0" layoutY="223.0" onMouseClicked="#adiciona" text="Adiciona" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="14.0">
          <stylesheets>
             <URL value="@../Stylesheets/buttons.css" />
             <URL value="@../Stylesheets/theme.css" />
          </stylesheets>
-         <styleClass>
-            <String fx:value="button" />
-            <String fx:value="background-primary" />
-            <String fx:value="text" />
-         </styleClass>
          <font>
             <Font size="18.0" />
          </font>
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="text-secondary" />
+            <String fx:value="background-primary" />
+         </styleClass>
+      </Label>
+      <Label layoutX="150.0" layoutY="224.0" onMouseClicked="#close" text="Cancel" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="92.0">
+         <stylesheets>
+            <URL value="@../Stylesheets/theme.css" />
+            <URL value="@../Stylesheets/buttons.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="text-terciary" />
+         </styleClass>
       </Label>
    </children>
 </AnchorPane>

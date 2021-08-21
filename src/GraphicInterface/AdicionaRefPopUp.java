@@ -65,4 +65,9 @@ public class AdicionaRefPopUp {
         this.indexRefPane = t;
         this.indexController = i;
     }
+
+    public void close() {
+        Stage stage = (Stage)textField.getScene().getWindow();
+        stage.close();
+    }
 }

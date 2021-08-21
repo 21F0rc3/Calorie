@@ -4,6 +4,10 @@ public class Utilizador {
     private float altura;
     private float peso;
 
+    private float lipPerc=0.25f;
+    private float carbPerc=0.50f;
+    private float protPerc=0.25f;
+
     public Utilizador() {
         altura=0;
         peso=0;
@@ -29,14 +33,26 @@ public class Utilizador {
         return peso / (altura * altura);
     }
 
+    public void setLipPerc(float lipPerc) {
+        this.lipPerc = lipPerc;
+    }
+
+    public void setCarbPerc(float carbPerc) {
+        this.carbPerc = carbPerc;
+    }
+
+    public void setProtPerc(float protPerc) {
+        this.protPerc = protPerc;
+    }
+
     public float[] diet() {
         float[] macros = new float[4];
 
         macros[0] = peso * 44; //Calorias
 
-        macros[1] = macros[0] * (0.25f / 9); //Lipidos
-        macros[2] = macros[0] * (0.5f / 4); //Carbohidratos
-        macros[3] = macros[0] * (0.25f / 4); //Proteinas
+        macros[1] = macros[0] * (lipPerc / 9); //Lipidos
+        macros[2] = macros[0] * (carbPerc / 4); //Carbohidratos
+        macros[3] = macros[0] * (protPerc / 4); //Proteinas
 
         return macros;
     }

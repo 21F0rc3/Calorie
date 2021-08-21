@@ -12,7 +12,7 @@
 
 <AnchorPane fx:id="refeicoesPane" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Refeicoes">
    <children>
-      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutY="50.0" minWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutY="50.0" minWidth="800.0" styleClass="background-tertiary" stylesheets="@../Stylesheets/theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
          <content>
             <GridPane fx:id="refeicoes" alignment="CENTER" gridLinesVisible="true" hgap="10.0" minWidth="800.0">
               <columnConstraints>
@@ -30,26 +30,45 @@
       </ScrollPane>
       <AnchorPane layoutX="2.0" layoutY="14.0" minHeight="50.0" minWidth="800.0" styleClass="background-primary" stylesheets="@../Stylesheets/theme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="12.0" maxWidth="166.0" onMouseClicked="#adicionaRefeicao" style="-fx-font-size: 150%;" text="Adiciona Refeições" textFill="#b4b5bc" AnchorPane.leftAnchor="166.0" AnchorPane.topAnchor="12.0">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="156.0" layoutY="7.0" maxWidth="152.0" onMouseClicked="#adicionaRefeicao" text="Adiciona Refeições" textFill="#b4b5bc" AnchorPane.leftAnchor="156.0" AnchorPane.topAnchor="7.0">
                <stylesheets>
                   <URL value="@../Stylesheets/theme.css" />
                   <URL value="@../Stylesheets/buttons.css" />
                </stylesheets>
                <styleClass>
-                  <String fx:value="button" />
-                  <String fx:value="text" />
-               </styleClass></Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="344.0" layoutY="12.0" maxWidth="143.0" onMouseClicked="#editaRefeicao" style="-fx-font-size: 150%;" text="Editar Refeições" textFill="#b4b5bc" AnchorPane.rightAnchor="143.0" AnchorPane.topAnchor="12.0">
-               <stylesheets>
-                  <URL value="@../Stylesheets/theme.css" />
-                  <URL value="@../Stylesheets/buttons.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="button" />
-                  <String fx:value="text" />
+                  <String fx:value="button2" />
+                  <String fx:value="text-secondary" />
                </styleClass>
+               <padding>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="333.0" layoutY="7.0" maxWidth="135.0" onMouseClicked="#editaRefeicao" text="Editar Refeições" textFill="#b4b5bc" AnchorPane.leftAnchor="333.0" AnchorPane.topAnchor="7.0">
+               <stylesheets>
+                  <URL value="@../Stylesheets/theme.css" />
+                  <URL value="@../Stylesheets/buttons.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="button2" />
+                  <String fx:value="text-secondary" />
+               </styleClass>
+               <padding>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="493.0" layoutY="7.0" maxWidth="150.0" stylesheets="@../Stylesheets/buttons.css" text="Eliminar Refeições" AnchorPane.leftAnchor="493.0" AnchorPane.topAnchor="7.0">
+               <styleClass>
+                  <String fx:value="text-secondary" />
+                  <String fx:value="button2" />
+               </styleClass>
+               <padding>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+               </padding>
             </Label>
          </children>
       </AnchorPane>
+      <AnchorPane minHeight="10.0" styleClass="background-secondary" stylesheets="@../Stylesheets/theme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
    </children>
 </AnchorPane>

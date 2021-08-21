@@ -7,31 +7,53 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.QuantidadePopUp">
+<AnchorPane minHeight="250.0" minWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.QuantidadePopUp">
    <children>
-      <Label alignment="CENTER" layoutX="94.0" layoutY="75.0" prefHeight="79.0" prefWidth="300.0" stylesheets="@../Stylesheets/theme.css" text="Quantidade?" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-         <styleClass>
-            <String fx:value="background-primary" />
-            <String fx:value="text" />
-         </styleClass>
-      </Label>
-      <TextField fx:id="quantidade" layoutX="76.0" layoutY="138.0" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="76.0" AnchorPane.topAnchor="138.0" />
-      <Label fx:id="button" alignment="CENTER" layoutX="104.0" layoutY="225.0" onMouseClicked="#addAlim" text="Adiciona" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="103.0" AnchorPane.rightAnchor="103.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-         <stylesheets>
-            <URL value="@../Stylesheets/buttons.css" />
-            <URL value="@../Stylesheets/theme.css" />
-         </stylesheets>
-         <styleClass>
-            <String fx:value="button" />
-            <String fx:value="background-primary" />
-            <String fx:value="text" />
-         </styleClass>
-      </Label>
+      <AnchorPane minHeight="59.0" styleClass="background-primary" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="259.0" onMouseClicked="#close" text="X" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="16.0">
+               <stylesheets>
+                  <URL value="@../Stylesheets/theme.css" />
+                  <URL value="@../Stylesheets/buttons.css" />
+               </stylesheets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="text-secondary" />
+               </styleClass></Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="10.0" styleClass="background-secondary" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="59.0" />
+      <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.0">
+         <children>
+            <Label layoutX="20.0" layoutY="51.0" styleClass="text-terciary" text="Quantidade" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="51.0" />
+            <TextField fx:id="quantidade" layoutX="20.0" layoutY="74.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="74.0" />
+            <Label layoutX="161.0" layoutY="179.0" onMouseClicked="#close" text="Close" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="92.0">
+               <stylesheets>
+                  <URL value="@../Stylesheets/buttons.css" />
+                  <URL value="@../Stylesheets/theme.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="text-terciary" />
+               </styleClass></Label>
+            <Label fx:id="button" layoutX="240.0" layoutY="182.0" onMouseClicked="#addAlim" text="Adiciona" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="14.0">
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="text-secondary" />
+                  <String fx:value="background-primary" />
+               </styleClass>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
+   <stylesheets>
+      <URL value="@../Stylesheets/buttons.css" />
+      <URL value="@../Stylesheets/theme.css" />
+   </stylesheets>
 </AnchorPane>

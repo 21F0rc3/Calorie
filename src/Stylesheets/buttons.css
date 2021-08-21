@@ -2,6 +2,15 @@
     -fx-background-color: none;
 }
 
+.button2 {
+}
+
 .button:hover {
-    -fx-background-color: gray;
+    -fx-background-color: #f68207;
+    -fx-background-radius: 0px;
+}
+
+.button2:hover {
+    -fx-background-color: #f68207;
+    -fx-background-radius: 0px;
 }

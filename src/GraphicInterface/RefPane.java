@@ -12,6 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class RefPane {
     private final Sistema sistema = Sistema.getInstance();
@@ -35,6 +36,7 @@ public class RefPane {
     public void showLista(MouseEvent click) {
         try {
             Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
             stage.setTitle("Adicionar alimento");
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ListaAlimentos.fxml"));
@@ -127,6 +129,7 @@ public class RefPane {
     public void editAlim(MouseEvent click) {
         try {
             Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
             stage.setTitle("Editar alimentos");
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("AlimentosRef.fxml"));
@@ -148,5 +151,10 @@ public class RefPane {
 
     public void delete() {
         indexController.getRefPaneController().delete(refPane);
+    }
+
+    public void close() {
+        Stage stage = (Stage)cal.getScene().getWindow();
+        stage.close();
     }
 }

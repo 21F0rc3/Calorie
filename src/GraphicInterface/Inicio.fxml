@@ -6,51 +6,50 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="inicioPane" minHeight="600.0" minWidth="800.0" styleClass="background-secondary" stylesheets="@../Stylesheets/theme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Inicio">
    <children>
-      <AnchorPane minHeight="540.0" minWidth="740.0" styleClass="card" stylesheets="@../Stylesheets/theme.css" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+      <AnchorPane fx:id="cardPane" layoutX="20.0" layoutY="20.0" minHeight="560.0" minWidth="760.0" styleClass="background-tertiary" stylesheets="@../Stylesheets/theme.css">
          <children>
-            <Label layoutY="30.0" text="Calorias" AnchorPane.leftAnchor="30.0">
+            <Label layoutX="40.0" layoutY="54.0" styleClass="text-primary" text="Calorias" AnchorPane.leftAnchor="40.0">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <ProgressBar fx:id="calBar" layoutY="82.0" prefHeight="18.0" prefWidth="262.0" progress="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="278.0" />
-            <Label fx:id="cal" layoutX="500.0" layoutY="30.0" text="0" AnchorPane.rightAnchor="30.0">
+            <ProgressBar fx:id="calBar" layoutX="40.0" layoutY="81.0" progress="0.0" styleClass="calBar" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+            <Label fx:id="cal" layoutX="707.0" layoutY="54.0" styleClass="text-primary" text="0" AnchorPane.rightAnchor="40.0">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutY="147.0" minWidth="-Infinity" text="Lipidos" AnchorPane.leftAnchor="30.0">
+            <Label layoutX="40.0" layoutY="189.0" minWidth="-Infinity" styleClass="text-primary" text="Lipidos" AnchorPane.leftAnchor="40.0">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <ProgressBar fx:id="lipBar" layoutY="194.0" prefHeight="18.0" prefWidth="259.0" progress="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="278.0" />
-            <Label fx:id="lip" layoutX="500.0" layoutY="147.0" text="0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="147.0">
+            <ProgressBar fx:id="lipBar" layoutX="40.0" layoutY="216.0" progress="0.0" styleClass="lipBar" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+            <Label fx:id="lip" layoutX="707.0" layoutY="189.0" styleClass="text-primary" text="0" AnchorPane.rightAnchor="40.0">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutY="267.0" minWidth="-Infinity" text="Carbohidratos" AnchorPane.leftAnchor="30.0">
+            <Label layoutX="40.0" layoutY="324.0" minWidth="-Infinity" styleClass="text-primary" text="Carbohidratos" AnchorPane.leftAnchor="40.0">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <ProgressBar fx:id="carbBar" layoutY="316.0" prefWidth="200.0" progress="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="278.0" />
-            <Label fx:id="carb" layoutX="500.0" layoutY="268.0" text="0" AnchorPane.rightAnchor="30.0">
+            <ProgressBar fx:id="carbBar" layoutX="40.0" layoutY="351.0" progress="0.0" styleClass="carbBar" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+            <Label fx:id="carb" layoutX="707.0" layoutY="324.0" styleClass="text-primary" text="0" AnchorPane.rightAnchor="40.0">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutY="382.0" minWidth="-Infinity" text="Proteinas" AnchorPane.leftAnchor="30.0">
+            <Label layoutX="40.0" layoutY="459.0" minWidth="-Infinity" styleClass="text-primary" text="Proteinas" AnchorPane.leftAnchor="40.0">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <ProgressBar fx:id="protBar" layoutY="429.0" prefWidth="200.0" progress="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="278.0" />
-            <Label fx:id="prot" layoutX="500.0" layoutY="388.0" text="0" AnchorPane.rightAnchor="30.0">
+            <ProgressBar fx:id="protBar" layoutX="40.0" layoutY="486.0" progress="0.0" styleClass="protBar" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+            <Label fx:id="prot" layoutX="707.0" layoutY="459.0" styleClass="text-primary" text="0" AnchorPane.rightAnchor="40.0">
                <font>
                   <Font size="24.0" />
                </font>

@@ -78,4 +78,9 @@ public class QuantidadePopUp {
        this.refPaneController = r;
        this.indexController = i;
     }
+
+    public void close() {
+        Stage stage = (Stage)button.getScene().getWindow();
+        stage.close();
+    }
 }

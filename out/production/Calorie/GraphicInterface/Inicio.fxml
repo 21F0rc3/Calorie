@@ -1,55 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="inicioPane" minHeight="600.0" minWidth="630.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Inicio">
+<AnchorPane fx:id="inicioPane" minHeight="600.0" minWidth="800.0" styleClass="background-secondary" stylesheets="@../Stylesheets/theme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicInterface.Inicio">
    <children>
-      <Label layoutX="41.0" layoutY="72.0" text="Calorias" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="72.0">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </Label>
-      <ProgressBar fx:id="calBar" layoutX="41.0" layoutY="124.0" prefHeight="18.0" prefWidth="262.0" progress="0.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="327.0" AnchorPane.topAnchor="124.0" />
-      <Label fx:id="cal" layoutX="541.0" layoutY="78.0" text="0" AnchorPane.rightAnchor="76.0" AnchorPane.topAnchor="72.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="41.0" layoutY="189.0" minWidth="-Infinity" text="Lipidos" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="189.0">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </Label>
-      <ProgressBar fx:id="lipBar" layoutX="41.0" layoutY="236.0" prefHeight="18.0" prefWidth="259.0" progress="0.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="327.0" AnchorPane.topAnchor="236.0" />
-      <Label fx:id="lip" layoutX="541.0" layoutY="195.0" text="0" AnchorPane.rightAnchor="76.0" AnchorPane.topAnchor="189.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="42.0" layoutY="309.0" minWidth="-Infinity" text="Carbohidratos" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="309.0">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </Label>
-      <ProgressBar fx:id="carbBar" layoutX="43.0" layoutY="358.0" prefWidth="200.0" progress="0.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="327.0" AnchorPane.topAnchor="358.0" />
-      <Label fx:id="carb" layoutX="542.0" layoutY="310.0" text="0" AnchorPane.rightAnchor="76.0" AnchorPane.topAnchor="310.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="41.0" layoutY="424.0" minWidth="-Infinity" text="Proteinas" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="424.0">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </Label>
-      <ProgressBar fx:id="protBar" layoutX="42.0" layoutY="471.0" prefWidth="200.0" progress="0.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="327.0" AnchorPane.topAnchor="471.0" />
-      <Label fx:id="prot" layoutX="541.0" layoutY="430.0" text="0" AnchorPane.rightAnchor="76.0" AnchorPane.topAnchor="430.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
+      <AnchorPane fx:id="cardPane" layoutX="20.0" layoutY="20.0" minHeight="560.0" minWidth="760.0" styleClass="background-tertiary" stylesheets="@../Stylesheets/theme.css">
+         <children>
+            <Label layoutX="40.0" layoutY="54.0" styleClass="text-primary" text="Calorias" AnchorPane.leftAnchor="40.0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="calBar" layoutX="40.0" layoutY="81.0" progress="0.0" styleClass="calBar" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+            <Label fx:id="cal" layoutX="707.0" layoutY="54.0" styleClass="text-primary" text="0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="189.0" minWidth="-Infinity" styleClass="text-primary" text="Lipidos" AnchorPane.leftAnchor="40.0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="lipBar" layoutX="40.0" layoutY="216.0" progress="0.0" styleClass="lipBar" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+            <Label fx:id="lip" layoutX="707.0" layoutY="189.0" styleClass="text-primary" text="0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="324.0" minWidth="-Infinity" styleClass="text-primary" text="Carbohidratos" AnchorPane.leftAnchor="40.0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="carbBar" layoutX="40.0" layoutY="351.0" progress="0.0" styleClass="carbBar" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+            <Label fx:id="carb" layoutX="707.0" layoutY="324.0" styleClass="text-primary" text="0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="459.0" minWidth="-Infinity" styleClass="text-primary" text="Proteinas" AnchorPane.leftAnchor="40.0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="protBar" layoutX="40.0" layoutY="486.0" progress="0.0" styleClass="protBar" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+            <Label fx:id="prot" layoutX="707.0" layoutY="459.0" styleClass="text-primary" text="0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
    </children>
 </AnchorPane>

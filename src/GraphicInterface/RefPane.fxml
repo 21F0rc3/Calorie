@@ -33,12 +33,12 @@
                </stylesheets>
                <styleClass>
                   <String fx:value="button" />
-                  <String fx:value="text" />
+                  <String fx:value="text-secondary" />
                </styleClass></Label>
             <Label alignment="CENTER" layoutY="58.0" onMouseClicked="#editAlim" prefHeight="58.0" text="Editar" textFill="#b4b5bc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="58.0">
                <styleClass>
                   <String fx:value="button" />
-                  <String fx:value="text" />
+                  <String fx:value="text-secondary" />
                </styleClass>
                <stylesheets>
                   <URL value="@../Stylesheets/buttons.css" />
@@ -51,7 +51,7 @@
                </stylesheets>
                <styleClass>
                   <String fx:value="button" />
-                  <String fx:value="text" />
+                  <String fx:value="text-secondary" />
                </styleClass></Label>
          </children>
       </AnchorPane>

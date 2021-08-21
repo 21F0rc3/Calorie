@@ -21,6 +21,7 @@ public class Inicio {
     @FXML public ProgressBar protBar;
 
     @FXML private Pane inicioPane;
+    @FXML private Pane cardPane;
 
     private Index indexController;
 
@@ -33,18 +34,18 @@ public class Inicio {
      * @param p - Proteinas
      */
     public void updateCounterTotalLabels(String c, String l, String ca, String p) {
-        cal.setText(c);
-        lip.setText(l);
-        carb.setText(ca);
-        prot.setText(p);
-
         float[] dieta = sistema.getUtilizador().diet();
 
+        cal.setText(c+"/"+((int)dieta[0]));
+        lip.setText(l+"/"+((int)dieta[1]));
+        carb.setText(ca+"/"+((int)dieta[2]));
+        prot.setText(p+"/"+((int)dieta[3]));
+
         //Atualiza os graficos na aba Inicio
-        calBar.setProgress(Float.parseFloat(cal.getText()) / dieta[0]);
-        lipBar.setProgress(Float.parseFloat(lip.getText()) / dieta[1]);
-        carbBar.setProgress(Float.parseFloat(carb.getText()) / dieta[2]);
-        protBar.setProgress(Float.parseFloat(prot.getText()) / dieta[3]);
+        calBar.setProgress(Float.parseFloat(c) / dieta[0]);
+        lipBar.setProgress(Float.parseFloat(l) / dieta[1]);
+        carbBar.setProgress(Float.parseFloat(ca) / dieta[2]);
+        protBar.setProgress(Float.parseFloat(p) / dieta[3]);
     }
 
     public void setPrimals(Index i) {
@@ -53,9 +54,11 @@ public class Inicio {
 
     public void setWidth(double newVal) {
         inicioPane.setPrefWidth(newVal-171);
+        cardPane.setPrefWidth(inicioPane.getWidth()-55);
     }
 
     public void setHeight(double newVal) {
         inicioPane.setPrefHeight(newVal);
+        cardPane.setPrefHeight(inicioPane.getHeight()-80);
     }
 }

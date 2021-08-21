@@ -156,22 +156,23 @@ public class Sistema {
                 Refeicao ref = searchRefeicao(refId);
 
                 int noAlim = Integer.parseInt(refTks[1]);
-                for(int j=0; j<noAlim; j++) {
-                        String[] alimTks = br.readLine().split(",");
-                        Alimento alimento = new Alimento(searchAlim(Integer.parseInt(alimTks[0])), Integer.parseInt(alimTks[1]));
-                        ref.addAlimento(alimento);
+                for (int j = 0; j < noAlim; j++) {
+                    String[] alimTks = br.readLine().split(",");
+                    Alimento alimento = new Alimento(searchAlim(Integer.parseInt(alimTks[0])), Integer.parseInt(alimTks[1]));
+                    ref.addAlimento(alimento);
                 }
                 Counter counter = ref.counter;
-                ref.getRefPaneController().updateLabels(counter.getCal()+"",counter.getLip()+"",counter.getCarb()+"",counter.getProt()+"");
+                ref.getRefPaneController().updateLabels(counter.getCal() + "", counter.getLip() + "", counter.getCarb() + "", counter.getProt() + "");
             }
-            Counter counterTotal = sistema.getCounterTotal();
-            index.getInicioController().updateCounterTotalLabels(counterTotal.getCal()+"",counterTotal.getLip()+"",counterTotal.getCarb()+"",counterTotal.getProt()+"");
 
             String[] userTks = br.readLine().split(",");
             index.getPerfilController().peso.setText(userTks[0]);
             index.getPerfilController().altura.setText(userTks[1]);
 
             index.getPerfilController().updatePeso();
+
+            Counter counterTotal = sistema.getCounterTotal();
+            index.getInicioController().updateCounterTotalLabels(counterTotal.getCal()+"",counterTotal.getLip()+"",counterTotal.getCarb()+"",counterTotal.getProt()+"");
         }catch (FileNotFoundException fe) {
             System.out.println("Sistema - loadData() : Novo dia! "+fe.toString());
             saveData(index);

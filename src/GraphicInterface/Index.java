@@ -64,9 +64,6 @@ public class Index {
             Refeicoes ref = loader.getController();
             ref.setPrimals(this);
 
-            parent.setPrefWidth(conteudo.getWidth());
-            parent.setPrefHeight(conteudo.getHeight());
-
             refeicoesPane = parent;
             refPaneController = ref;
 
